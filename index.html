@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="player">
+        <h2>Smile Music Player</h2>
+        <img id="albumArt" src="default.jpg" alt="Album Art">
+        <h3 id="trackTitle">No Song Selected</h3>
+        <audio id="audioPlayer" controls></audio>
+
+        <input type="range" id="progress" value="0">
+        
+        <div class="controls">
+            <button id="prevBtn">⏮️</button>
+            <button id="playPauseBtn">▶️</button>
+            <button id="nextBtn">⏭️</button>
+            <button id="favoriteBtn">❤️</button>
+        </div>
+
+        <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+        
+        <button id="addMusic">➕ Add Music</button>
+        <input type="file" id="fileInput" accept="audio/*" multiple hidden>
+
+        <h3>Favorites</h3>
+        <ul id="favoritesList"></ul>
+
+        <h3>Last Played</h3>
+        <ul id="lastPlayedList"></ul>
+
+        <h3>Recently Added</h3>
+        <ul id="recentlyAddedList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
